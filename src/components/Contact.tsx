@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useReducedMotion } from 'motion/react'
+import { useReducedMotion } from 'motion/react'
 import { Reveal } from '../lib/motion'
 import { EMAIL } from '../data/content'
 
@@ -29,7 +29,7 @@ function MagneticCta() {
       onMouseLeave={onLeave}
       style={{ transition: 'transform 0.4s cubic-bezier(0.16,1,0.3,1), background 0.5s, color 0.5s' }}
     >
-      Écrire à la conciergerie
+      Écrire à Jean Baptiste
     </a>
   )
 }
@@ -38,15 +38,15 @@ export function Contact() {
   return (
     <section className="section contact" id="contact">
       <Reveal>
-        <p className="eyebrow">Réponse dans la journée</p>
+        <p className="eyebrow">Je réponds dans la journée</p>
       </Reveal>
       <Reveal delay={0.1}>
-        <motion.h2 className="contact__title">Prendre attache</motion.h2>
+        <h2 className="contact__title">Écrivez-moi</h2>
       </Reveal>
       <Reveal delay={0.2}>
         <p className="contact__body">
-          Pour un hôte, un plateau, un défilé ou un jour qui compte : une date, un lieu,
-          une intention suffisent.
+          Un hôtel, un shooting, un mariage, ou juste une envie de changement : dites-moi
+          la date et le lieu, je m’occupe du reste.
         </p>
       </Reveal>
       <Reveal delay={0.3}>
@@ -56,7 +56,7 @@ export function Contact() {
         <div className="contact__meta">
           <span>{EMAIL}</span>
           <span>Paris &amp; partout ailleurs</span>
-          <span>Sur rendez-vous uniquement</span>
+          <span>Sur rendez-vous</span>
         </div>
       </Reveal>
     </section>

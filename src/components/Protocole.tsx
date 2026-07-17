@@ -6,10 +6,10 @@ export function Protocole() {
     <section className="section protocole" id="protocole">
       <div className="protocole__head">
         <Reveal>
-          <p className="eyebrow eyebrow--laiton">Pour les concierges &amp; les agences</p>
+          <p className="eyebrow eyebrow--laiton">Pour les hôtels, les agences — et vous</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <h2 className="protocole__title">Le protocole</h2>
+          <h2 className="protocole__title">Comment ça se passe</h2>
         </Reveal>
       </div>
       <div className="protocole__steps">
@@ -23,8 +23,8 @@ export function Protocole() {
       </div>
       <Reveal delay={0.3}>
         <p className="protocole__note">
-          Un dossier de présentation est à la disposition des hôtels et des agences —{' '}
-          <a href={`mailto:${EMAIL}?subject=Dossier de présentation`}>sur simple demande</a>.
+          Vous êtes un hôtel ou une agence ? J’ai préparé un dossier de présentation —{' '}
+          <a href={`mailto:${EMAIL}?subject=Dossier de présentation`}>écrivez-moi, je vous l’envoie</a>.
         </p>
       </Reveal>
     </section>

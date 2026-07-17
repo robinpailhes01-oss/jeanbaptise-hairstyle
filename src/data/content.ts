@@ -1,5 +1,5 @@
 /**
- * Contenu éditorial provisoire — à valider avec Jean Baptiste.
+ * Contenu éditorial — voix de Jean Baptiste, première personne.
  * Les images vivent dans public/images/ : remplacer les fichiers
  * en conservant les mêmes noms.
  */
@@ -35,25 +35,25 @@ export const services: Service[] = [
   {
     num: '01',
     name: 'Palaces & Hôtels',
-    desc: 'Le service en suite, pour vos hôtes, du lever au gala.',
+    desc: 'Je viens coiffer vos hôtes dans leur suite, du matin au soir de gala.',
     image: images.bord,
   },
   {
     num: '02',
     name: 'Agences & Productions',
-    desc: 'Plateaux, shootings, défilés. Une main sûre, à l’heure.',
+    desc: 'Shootings, plateaux, défilés : je suis là avant l’heure, prêt.',
     image: images.profil,
   },
   {
     num: '03',
     name: 'Particuliers',
-    desc: 'À domicile, sur rendez-vous. La discrétion en plus.',
+    desc: 'Je viens chez vous, en toute discrétion. Le salon en moins, le confort en plus.',
     image: images.geste,
   },
   {
     num: '04',
     name: 'Événements & Mariages',
-    desc: 'Le jour où rien ne doit être laissé au hasard.',
+    desc: 'Le grand jour, j’arrive tôt et je reste le temps qu’il faut.',
     image: images.portrait,
   },
 ]
@@ -61,17 +61,17 @@ export const services: Service[] = [
 export const protocole = [
   {
     num: 'I',
-    name: 'La demande',
-    desc: 'Un message, une date, un lieu. La conciergerie confirme la disponibilité dans la journée.',
+    name: 'Vous m’écrivez',
+    desc: 'Une date, un lieu, une envie. Je vous réponds dans la journée.',
   },
   {
     num: 'II',
-    name: 'La préparation',
-    desc: 'Préférences, contraintes, repérage. Tout est réglé avant même d’arriver.',
+    name: 'On prépare',
+    desc: 'On échange, je note vos préférences, et j’arrive avec tout ce qu’il faut.',
   },
   {
     num: 'III',
-    name: 'Le geste',
-    desc: 'Jean Baptiste s’installe, œuvre, et s’efface. Il ne reste que la coiffure.',
+    name: 'Je coiffe',
+    desc: 'Je m’installe, je coiffe, je range. Il ne reste que le plaisir d’être bien coiffé.',
   },
 ]

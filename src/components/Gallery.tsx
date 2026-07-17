@@ -50,7 +50,7 @@ export function Gallery() {
         <div className="gallery__item--e">
           <Frame src={images.bord} alt="À bord, en déplacement" num="II" label="Photographie II" />
           <p className="gallery__caption">
-            <span>À bord — en déplacement</span>
+            <span>Entre deux rendez-vous</span>
             <span>II / IV</span>
           </p>
         </div>

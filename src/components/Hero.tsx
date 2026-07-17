@@ -42,7 +42,7 @@ export function Hero({ ready }: { ready: boolean }) {
         transition={{ duration: 1, delay: 0.9, ease: easeCouture }}
       >
         <span className="filet" aria-hidden="true" />
-        <p className="eyebrow">Conciergerie de haute coiffure — Paris &amp; partout ailleurs</p>
+        <p className="eyebrow">Coiffeur — je viens à vous, à Paris &amp; partout ailleurs</p>
       </motion.div>
 
       <motion.figure className="hero__figure" style={{ y: figureY }}>
@@ -53,7 +53,7 @@ export function Hero({ ready }: { ready: boolean }) {
         >
           <Frame src={images.geste} alt="Jean Baptiste sculptant un chignon en backstage" num="I" label="Photographie I" />
         </motion.div>
-        <figcaption>Le geste — en backstage</figcaption>
+        <figcaption>En plein travail — backstage</figcaption>
       </motion.figure>
 
       <motion.div
@@ -64,7 +64,7 @@ export function Hero({ ready }: { ready: boolean }) {
         aria-hidden="true"
       >
         <span className="hero__scroll-line" />
-        <span>Palaces · Agences · Productions · Particuliers</span>
+        <span>Hôtels · Agences · Shootings · Mariages · Chez vous</span>
       </motion.div>
     </section>
   )

@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Lenis from 'lenis'
 import { Veil } from './components/Veil'
 import { Header } from './components/Header'
 import { Hero } from './components/Hero'
@@ -11,6 +12,22 @@ import { Footer } from './components/Footer'
 
 export default function App() {
   const [veilDone, setVeilDone] = useState(false)
+
+  // Défilement inertiel doux (désactivé si l'utilisateur préfère moins de mouvement)
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const lenis = new Lenis({ lerp: 0.09, anchors: true })
+    let raf: number
+    const loop = (time: number) => {
+      lenis.raf(time)
+      raf = requestAnimationFrame(loop)
+    }
+    raf = requestAnimationFrame(loop)
+    return () => {
+      cancelAnimationFrame(raf)
+      lenis.destroy()
+    }
+  }, [])
 
   return (
     <>

@@ -27,13 +27,11 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
+/* Le défilement doux est géré par Lenis (voir App.tsx) ;
+   scroll-behavior natif en secours pour les ancres sans JS. */
+@media (prefers-reduced-motion: no-preference) {
   html {
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
   }
 }
 
@@ -142,7 +140,18 @@ button {
   align-items: center;
   justify-content: space-between;
   padding: 20px var(--marge);
-  mix-blend-mode: normal;
+  border-bottom: 1px solid transparent;
+  transition: background 0.5s var(--ease-couture), border-color 0.5s var(--ease-couture),
+    padding 0.5s var(--ease-couture);
+}
+
+.header--solid {
+  background: rgba(243, 240, 234, 0.88);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: var(--ligne);
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 
 .header__mark {

@@ -26,10 +26,10 @@ export function Services() {
     <section className="section" id="conciergerie" onMouseMove={onMove}>
       <div className="services__head">
         <Reveal>
-          <p className="eyebrow eyebrow--laiton">La Conciergerie</p>
+          <p className="eyebrow eyebrow--laiton">Ce que je fais</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="eyebrow">Sur rendez-vous uniquement</p>
+          <p className="eyebrow">Sur rendez-vous</p>
         </Reveal>
       </div>
       <ul className="services__list">

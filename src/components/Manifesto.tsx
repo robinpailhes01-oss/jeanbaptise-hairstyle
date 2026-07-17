@@ -4,26 +4,27 @@ export function Manifesto() {
   return (
     <section className="section manifesto">
       <Reveal>
-        <p className="eyebrow eyebrow--laiton">Le principe</p>
+        <p className="eyebrow eyebrow--laiton">L’idée</p>
       </Reveal>
       <h2 className="manifesto__text display">
         <span className="manifesto__line">
-          <MaskedLine>Le salon n’a plus</MaskedLine>
+          <MaskedLine>Mon salon, c’est</MaskedLine>
         </span>
         <span className="manifesto__line">
-          <MaskedLine delay={0.12}>d’adresse. Il se déplace,</MaskedLine>
+          <MaskedLine delay={0.12}>là où vous êtes — une suite,</MaskedLine>
         </span>
         <span className="manifesto__line">
           <MaskedLine delay={0.24}>
-            <em>en silence</em>, là où vous êtes.
+            un plateau, <em>chez vous</em>.
           </MaskedLine>
         </span>
       </h2>
       <Reveal delay={0.3}>
         <p className="manifesto__aside">
-          Jean Baptiste coiffe là où on l’attend : une suite au petit matin, un plateau
-          avant la lumière, un salon privé la veille d’un soir important. Une seule
-          exigence, la même partout — le geste juste, sans bruit.
+          Je m’appelle Jean Baptiste. Je coiffe depuis plus de dix ans, des backstages de
+          défilés aux suites d’hôtel. Ce que j’aime : arriver avec mes ciseaux, m’installer
+          n’importe où, et vous rendre la vie simple. Vous n’avez rien à préparer — juste à
+          être là.
         </p>
       </Reveal>
     </section>
