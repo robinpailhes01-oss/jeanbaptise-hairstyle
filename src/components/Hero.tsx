@@ -51,9 +51,9 @@ export function Hero({ ready }: { ready: boolean }) {
           animate={ready ? { opacity: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Frame src={images.hero} alt="Le geste — coiffure en atelier" num="I" label="Photographie I" />
+          <Frame src={images.geste} alt="Jean Baptiste sculptant un chignon en backstage" num="I" label="Photographie I" />
         </motion.div>
-        <figcaption>Le geste — atelier, Paris</figcaption>
+        <figcaption>Le geste — en backstage</figcaption>
       </motion.figure>
 
       <motion.div

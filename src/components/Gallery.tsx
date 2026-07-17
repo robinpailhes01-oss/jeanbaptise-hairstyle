@@ -19,9 +19,9 @@ export function Gallery() {
       </div>
       <div className="gallery__grid">
         <div className="gallery__item--a">
-          <Frame src={images.profil} alt="Coiffure sculptée, de profil" num="III" label="Photographie III" />
+          <Frame src={images.profil} alt="Carré ondulé, de profil, face à la mer" num="III" label="Photographie III" />
           <p className="gallery__caption">
-            <span>Le lissé</span>
+            <span>Le carré — Riviera</span>
             <span>III / IV</span>
           </p>
         </div>
@@ -33,9 +33,9 @@ export function Gallery() {
           </p>
         </div>
         <div className="gallery__item--c">
-          <Frame src={images.objets} alt="Les instruments" num="IV" label="Photographie IV" />
+          <Frame src={images.portrait} alt="Portrait de Jean Baptiste" num="IV" label="Photographie IV" />
           <p className="gallery__caption">
-            <span>Les instruments</span>
+            <span>Jean Baptiste</span>
             <span>IV / IV</span>
           </p>
         </div>
@@ -47,9 +47,9 @@ export function Gallery() {
           </p>
         </div>
         <div className="gallery__item--e">
-          <Frame src={images.suite} alt="Le vestiaire de service, en suite" num="II" label="Photographie II" />
+          <Frame src={images.bord} alt="À bord, en déplacement" num="II" label="Photographie II" />
           <p className="gallery__caption">
-            <span>Le vestiaire de service</span>
+            <span>À bord — en déplacement</span>
             <span>II / IV</span>
           </p>
         </div>

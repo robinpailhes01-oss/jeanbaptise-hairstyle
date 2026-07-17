@@ -1,16 +1,16 @@
 /**
  * Contenu éditorial provisoire — à valider avec Jean Baptiste.
  * Les images vivent dans public/images/ : remplacer les fichiers
- * par les vraies photos en conservant les mêmes noms.
+ * en conservant les mêmes noms.
  */
 
 export const EMAIL = 'contact@jeanbaptiste-coiffure.fr'
 
 export const images = {
-  hero: '/images/photo-01.jpg',
-  suite: '/images/photo-02.jpg',
+  geste: '/images/photo-01.jpg',
+  bord: '/images/photo-02.jpg',
   profil: '/images/photo-03.jpg',
-  objets: '/images/photo-04.jpg',
+  portrait: '/images/photo-04.jpg',
 }
 
 export type Service = {
@@ -25,7 +25,7 @@ export const services: Service[] = [
     num: '01',
     name: 'Palaces & Hôtels',
     desc: 'Le service en suite, pour vos hôtes, du lever au gala.',
-    image: images.suite,
+    image: images.bord,
   },
   {
     num: '02',
@@ -37,13 +37,13 @@ export const services: Service[] = [
     num: '03',
     name: 'Particuliers',
     desc: 'À domicile, sur rendez-vous. La discrétion en plus.',
-    image: images.hero,
+    image: images.geste,
   },
   {
     num: '04',
     name: 'Événements & Mariages',
     desc: 'Le jour où rien ne doit être laissé au hasard.',
-    image: images.objets,
+    image: images.portrait,
   },
 ]
 
