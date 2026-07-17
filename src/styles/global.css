@@ -264,9 +264,16 @@ button {
 }
 
 @media (max-width: 860px) {
+  /* Composition mobile : accroche en haut, photo au centre,
+     wordmark ancré en bas — plus de grand vide à l'ouverture. */
   .hero {
-    justify-content: flex-end;
-    gap: 40px;
+    justify-content: flex-start;
+    padding-top: 92px;
+    gap: 24px;
+  }
+  .hero__sub {
+    order: 1;
+    margin-top: 0;
   }
   .hero__figure {
     position: relative;
@@ -274,8 +281,13 @@ button {
     bottom: auto;
     width: min(62vw, 300px);
     align-self: flex-end;
-    order: -1;
-    margin-top: 8vh;
+    order: 2;
+    margin-top: 3vh;
+  }
+  .hero__wordmark {
+    order: 3;
+    margin-top: auto;
+    padding-bottom: 8px;
   }
 }
 
@@ -769,6 +781,100 @@ button {
 .contact__cta:hover {
   background: var(--porcelaine);
   color: var(--encre);
+}
+
+/* ——— Formulaire de demande ——— */
+
+.demande {
+  margin: 56px auto 0;
+  max-width: 680px;
+  text-align: left;
+}
+
+.demande__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 36px 40px;
+}
+
+.demande__field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.demande__field--full {
+  grid-column: 1 / -1;
+}
+
+.demande__label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--laiton);
+}
+
+.demande__input {
+  font: inherit;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--porcelaine);
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--ligne-claire);
+  border-radius: 0;
+  padding: 8px 0 12px;
+  transition: border-color 0.4s var(--ease-couture);
+}
+
+.demande__input::placeholder {
+  color: rgba(243, 240, 234, 0.35);
+}
+
+.demande__input:focus {
+  outline: none;
+  border-bottom-color: var(--laiton);
+}
+
+select.demande__input {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%239C7B4F'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+}
+
+select.demande__input option {
+  color: var(--encre);
+  background: var(--porcelaine);
+}
+
+textarea.demande__input {
+  resize: vertical;
+  min-height: 72px;
+}
+
+.demande__submit {
+  margin-top: 48px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.demande__note {
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(243, 240, 234, 0.45);
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .demande__grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
 }
 
 .contact__meta {
