@@ -28,7 +28,9 @@ export type Service = {
   num: string
   name: string
   desc: string
-  image?: string
+  detail: string
+  prestations: string[]
+  image: string
 }
 
 export const services: Service[] = [
@@ -36,24 +38,36 @@ export const services: Service[] = [
     num: '01',
     name: 'Palaces & Hôtels',
     desc: 'Je viens coiffer vos hôtes dans leur suite, du matin au soir de gala.',
+    detail:
+      'Vos hôtes me retrouvent dans leur suite, à l’heure qui les arrange. Je travaille en silence, je laisse la chambre impeccable — et votre conciergerie ne reçoit que des compliments.',
+    prestations: ['Brushing & coiffage', 'Chignons du soir', 'Coupe en suite', 'Forfaits séjour'],
     image: images.bord,
   },
   {
     num: '02',
     name: 'Agences & Productions',
     desc: 'Shootings, plateaux, défilés : je suis là avant l’heure, prêt.',
+    detail:
+      'Un plateau qui tourne n’attend pas. J’arrive avant l’équipe, je suis la lumière, et je tiens la coiffure toute la journée — retouches comprises.',
+    prestations: ['Shootings & campagnes', 'Défilés & showrooms', 'Clips & tournages', 'Direction coiffure'],
     image: images.profil,
   },
   {
     num: '03',
     name: 'Particuliers',
     desc: 'Je viens chez vous, en toute discrétion. Le salon en moins, le confort en plus.',
+    detail:
+      'Chez vous, au calme. On prend le temps de parler de vos cheveux, de ce qui vous va vraiment — et je coiffe pendant que le café passe.',
+    prestations: ['Coupe & coiffage', 'Couleur & soin', 'Avant un événement', 'Rendez-vous réguliers'],
     image: images.geste,
   },
   {
     num: '04',
     name: 'Événements & Mariages',
     desc: 'Le grand jour, j’arrive tôt et je reste le temps qu’il faut.',
+    detail:
+      'Un mariage se joue le matin. J’arrive tôt, je coiffe la mariée puis ceux qui comptent, et je reste pour la retouche juste avant les photos.',
+    prestations: ['Essai coiffure', 'Jour J à domicile', 'Cortège & invités', 'Retouches sur place'],
     image: images.portrait,
   },
 ]

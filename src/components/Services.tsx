@@ -1,26 +1,29 @@
 import { useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
-import { Reveal } from '../lib/motion'
+import { Reveal, easeCouture } from '../lib/motion'
 import { services } from '../data/content'
 
 /**
- * Index des services, façon index de maison de couture :
- * au survol d'une ligne, sa photographie suit le curseur.
+ * Index des services, façon index de maison de couture.
+ * Chaque ligne s'ouvre (photo + détail + prestations) ; au survol,
+ * sur les écrans avec souris, sa photographie suit le curseur.
  */
 export function Services() {
-  const [active, setActive] = useState<number | null>(null)
-  const [failed, setFailed] = useState<Record<number, boolean>>({})
+  const [open, setOpen] = useState<number | null>(null)
+  const [hovered, setHovered] = useState<number | null>(null)
   const pos = useRef({ x: 0, y: 0 })
   const [, force] = useState(0)
   const reduced = useReducedMotion()
+  const canHover =
+    typeof window !== 'undefined' && window.matchMedia('(hover: hover)').matches
 
   const onMove = (e: React.MouseEvent) => {
     pos.current = { x: e.clientX, y: e.clientY }
     force((n) => n + 1)
   }
 
-  const current = active !== null ? services[active] : null
-  const showImage = !reduced && current?.image && !failed[active!]
+  const cursor = hovered !== null && open !== hovered ? services[hovered] : null
+  const showCursorImage = canHover && !reduced && cursor
 
   return (
     <section className="section" id="conciergerie" onMouseMove={onMove}>
@@ -33,25 +36,61 @@ export function Services() {
         </Reveal>
       </div>
       <ul className="services__list">
-        {services.map((s, i) => (
-          <Reveal key={s.num} delay={i * 0.06} y={20}>
-            <li
-              className="service-row"
-              onMouseEnter={() => setActive(i)}
-              onMouseLeave={() => setActive(null)}
-            >
-              <div className="service-row__inner">
-                <span className="service-row__num">{s.num}</span>
-                <h3 className="service-row__name">{s.name}</h3>
-                <p className="service-row__desc">{s.desc}</p>
-              </div>
-            </li>
-          </Reveal>
-        ))}
+        {services.map((s, i) => {
+          const isOpen = open === i
+          return (
+            <Reveal key={s.num} delay={i * 0.06} y={20}>
+              <li
+                className={`service-row ${isOpen ? 'service-row--open' : ''}`}
+                onMouseEnter={() => setHovered(i)}
+                onMouseLeave={() => setHovered(null)}
+              >
+                <button
+                  type="button"
+                  className="service-row__inner"
+                  aria-expanded={isOpen}
+                  onClick={() => setOpen(isOpen ? null : i)}
+                >
+                  <span className="service-row__num">{s.num}</span>
+                  <span className="service-row__name">{s.name}</span>
+                  <span className="service-row__desc">{s.desc}</span>
+                  <span className="service-row__toggle" aria-hidden="true">
+                    {isOpen ? '−' : '+'}
+                  </span>
+                </button>
+                <AnimatePresence initial={false}>
+                  {isOpen && (
+                    <motion.div
+                      className="service-panel"
+                      initial={reduced ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                      animate={reduced ? { opacity: 1 } : { height: 'auto', opacity: 1 }}
+                      exit={reduced ? { opacity: 0 } : { height: 0, opacity: 0 }}
+                      transition={{ duration: 0.7, ease: easeCouture }}
+                    >
+                      <div className="service-panel__inner">
+                        <div className="service-panel__media">
+                          <img src={s.image} alt="" loading="lazy" />
+                        </div>
+                        <div className="service-panel__text">
+                          <p className="service-panel__detail">{s.detail}</p>
+                          <ul className="service-panel__prestations">
+                            {s.prestations.map((p) => (
+                              <li key={p}>{p}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </li>
+            </Reveal>
+          )
+        })}
       </ul>
 
       <AnimatePresence>
-        {showImage && current && (
+        {showCursorImage && cursor && (
           <motion.div
             className="service-row__image"
             initial={{ opacity: 0, scale: 0.92 }}
@@ -64,11 +103,7 @@ export function Services() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ opacity: { duration: 0.35 }, scale: { duration: 0.35 }, x: { duration: 0.4, ease: 'easeOut' }, y: { duration: 0.4, ease: 'easeOut' } }}
           >
-            <img
-              src={current.image}
-              alt=""
-              onError={() => setFailed((f) => ({ ...f, [active!]: true }))}
-            />
+            <img src={cursor.image} alt="" />
           </motion.div>
         )}
       </AnimatePresence>

@@ -377,7 +377,7 @@ button {
   font-family: var(--font-display);
   font-size: clamp(34px, 5.6vw, 84px);
   line-height: 1.12;
-  margin-top: 40px;
+  margin-top: clamp(24px, 3vw, 40px);
 }
 
 .manifesto__text em {
@@ -391,7 +391,7 @@ button {
 }
 
 .manifesto__aside {
-  margin-top: 48px;
+  margin-top: clamp(32px, 4vw, 48px);
   max-width: 440px;
   color: var(--taupe);
   font-size: 15px;
@@ -422,16 +422,28 @@ button {
 }
 
 .service-row__inner {
+  cursor: pointer;
   display: grid;
-  grid-template-columns: 64px 1fr auto;
+  grid-template-columns: 64px 1fr auto 32px;
   align-items: baseline;
   gap: 24px;
   padding: clamp(26px, 3.5vw, 44px) 8px;
+  width: 100%;
+  text-align: left;
   transition: padding-left 0.6s var(--ease-couture);
 }
 
-.service-row:hover .service-row__inner {
+.service-row:hover .service-row__inner,
+.service-row--open .service-row__inner {
   padding-left: 28px;
+}
+
+.service-row__toggle {
+  font-family: var(--font-display);
+  font-size: 26px;
+  line-height: 1;
+  color: var(--laiton);
+  justify-self: end;
 }
 
 .service-row__num {
@@ -458,12 +470,79 @@ button {
 
 @media (max-width: 860px) {
   .service-row__inner {
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 40px 1fr 28px;
   }
   .service-row__desc {
     grid-column: 2;
     text-align: left;
     max-width: none;
+  }
+  .service-row__toggle {
+    grid-row: 1;
+    grid-column: 3;
+  }
+}
+
+/* ——— Panneau de service (accordéon) ——— */
+
+.service-panel {
+  overflow: hidden;
+}
+
+.service-panel__inner {
+  display: grid;
+  grid-template-columns: minmax(180px, 260px) 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  padding: 8px 8px clamp(32px, 4vw, 52px) 28px;
+  align-items: start;
+}
+
+.service-panel__media {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border: 1px solid var(--ligne);
+}
+
+.service-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-panel__detail {
+  max-width: 520px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--taupe);
+}
+
+.service-panel__prestations {
+  list-style: none;
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 32px;
+  max-width: 520px;
+}
+
+.service-panel__prestations li {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--ligne);
+}
+
+@media (max-width: 640px) {
+  .service-panel__inner {
+    grid-template-columns: 1fr;
+    padding-left: 8px;
+  }
+  .service-panel__media {
+    max-width: 240px;
+  }
+  .service-panel__prestations {
+    grid-template-columns: 1fr;
   }
 }
 
