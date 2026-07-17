@@ -1,10 +1,11 @@
 import { Reveal } from '../lib/motion'
-import { images } from '../data/content'
+import { images, reels } from '../data/content'
 import { Frame } from './Frame'
+import { Reel } from './Reel'
 
 /**
  * Galerie éditoriale pensée pour peu d'images : 4 photographies,
- * 2 réels — chacune traitée en grand, en quinconce.
+ * 3 réels — chacune traitée en grand, en quinconce.
  */
 export function Gallery() {
   return (
@@ -14,7 +15,7 @@ export function Gallery() {
           <p className="eyebrow eyebrow--laiton">En images</p>
         </Reveal>
         <Reveal delay={0.1}>
-          <p className="eyebrow">Quatre photographies — deux réels</p>
+          <p className="eyebrow">Photographies &amp; réels</p>
         </Reveal>
       </div>
       <div className="gallery__grid">
@@ -26,9 +27,9 @@ export function Gallery() {
           </p>
         </div>
         <div className="gallery__item--b">
-          <Frame alt="Réel — le geste en mouvement" num="I" label="Réel I — à venir" reel />
+          <Reel {...reels[0]} />
           <p className="gallery__caption">
-            <span>En mouvement</span>
+            <span>{reels[0].title}</span>
             <span>Réel I</span>
           </p>
         </div>
@@ -40,9 +41,9 @@ export function Gallery() {
           </p>
         </div>
         <div className="gallery__item--d">
-          <Frame alt="Réel — en suite" num="II" label="Réel II — à venir" reel />
+          <Reel {...reels[1]} />
           <p className="gallery__caption">
-            <span>En suite</span>
+            <span>{reels[1].title}</span>
             <span>Réel II</span>
           </p>
         </div>
@@ -51,6 +52,13 @@ export function Gallery() {
           <p className="gallery__caption">
             <span>À bord — en déplacement</span>
             <span>II / IV</span>
+          </p>
+        </div>
+        <div className="gallery__item--f">
+          <Reel {...reels[2]} />
+          <p className="gallery__caption">
+            <span>{reels[2].title}</span>
+            <span>Réel III</span>
           </p>
         </div>
       </div>

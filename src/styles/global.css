@@ -502,14 +502,16 @@ button {
 .gallery__item--b { grid-column: 7 / 10; margin-top: clamp(60px, 10vw, 160px); }
 .gallery__item--c { grid-column: 10 / 13; margin-top: clamp(30px, 5vw, 80px); }
 .gallery__item--d { grid-column: 2 / 5; margin-top: clamp(40px, 6vw, 96px); }
-.gallery__item--e { grid-column: 6 / 11; margin-top: clamp(-40px, -3vw, -20px); }
+.gallery__item--e { grid-column: 5 / 10; margin-top: clamp(80px, 10vw, 180px); }
+.gallery__item--f { grid-column: 10 / 13; margin-top: clamp(50px, 7vw, 120px); }
 
 @media (max-width: 860px) {
   .gallery__item--a,
   .gallery__item--b,
   .gallery__item--c,
   .gallery__item--d,
-  .gallery__item--e {
+  .gallery__item--e,
+  .gallery__item--f {
     grid-column: 2 / 12;
     margin-top: 40px;
   }
@@ -529,14 +531,15 @@ button {
   position: absolute;
   inset: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 16px;
 }
 
 .reel-badge__ring {
-  width: 72px;
-  height: 72px;
-  border: 1px solid var(--laiton);
+  width: 60px;
+  height: 60px;
+  border: 1px solid rgba(250, 248, 243, 0.85);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -544,7 +547,9 @@ button {
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--laiton);
+  color: rgba(250, 248, 243, 0.95);
+  background: rgba(26, 23, 19, 0.14);
+  backdrop-filter: blur(3px);
 }
 
 /* ——— Protocole ——— */

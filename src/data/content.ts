@@ -13,6 +13,17 @@ export const images = {
   portrait: '/images/photo-04.jpg',
 }
 
+/**
+ * Couvertures des réels. Quand les fichiers vidéo seront disponibles,
+ * les déposer dans public/videos/ sous reel-01.mp4, reel-02.mp4,
+ * reel-03.mp4 : ils remplaceront automatiquement les couvertures.
+ */
+export const reels = [
+  { cover: '/images/reel-01.jpg', video: '/videos/reel-01.mp4', title: 'Le chignon tressé' },
+  { cover: '/images/reel-02.jpg', video: '/videos/reel-02.mp4', title: 'Les tulipes' },
+  { cover: '/images/reel-03.jpg', video: '/videos/reel-03.mp4', title: 'Le jour J' },
+]
+
 export type Service = {
   num: string
   name: string
