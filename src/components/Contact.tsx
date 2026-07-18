@@ -69,10 +69,7 @@ function DemandeForm() {
       <button type="submit" className="contact__cta demande__submit">
         Envoyer ma demande
       </button>
-      <p className="demande__note">
-        Le bouton ouvre votre messagerie, le message est déjà prêt — ou écrivez-moi
-        directement : {EMAIL}
-      </p>
+      <p className="demande__note">Le bouton ouvre votre messagerie, message déjà prêt.</p>
     </form>
   )
 }
@@ -88,8 +85,7 @@ export function Contact() {
       </Reveal>
       <Reveal delay={0.2}>
         <p className="contact__body">
-          Un hôtel, un shooting, un mariage, ou juste une envie de changement : dites-moi
-          la date et le lieu, je m’occupe du reste.
+          Dites-moi la date et le lieu — je m’occupe du reste.
         </p>
       </Reveal>
       <Reveal delay={0.3}>

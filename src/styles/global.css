@@ -78,7 +78,7 @@ button {
 /* ——— Utilitaires typographiques ——— */
 
 .eyebrow {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.22em;
   text-transform: uppercase;
@@ -169,7 +169,7 @@ button {
 }
 
 .header__link {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -257,7 +257,7 @@ button {
 
 .hero__figure figcaption {
   margin-top: 10px;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -302,7 +302,7 @@ button {
   gap: 12px;
   margin-top: 20px;
   padding-left: calc(clamp(40px, 8vw, 120px) + 24px);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -445,9 +445,9 @@ button {
 
 .manifesto__aside {
   margin-top: clamp(32px, 4vw, 48px);
-  max-width: 440px;
+  max-width: 500px;
   color: var(--taupe);
-  font-size: 15px;
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -514,7 +514,7 @@ button {
 }
 
 .service-row__desc {
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 0.04em;
   color: var(--taupe);
   max-width: 300px;
@@ -563,8 +563,8 @@ button {
 }
 
 .service-panel__detail {
-  max-width: 520px;
-  font-size: 15px;
+  max-width: 560px;
+  font-size: 17px;
   line-height: 1.8;
   color: var(--taupe);
 }
@@ -579,7 +579,7 @@ button {
 }
 
 .service-panel__prestations li {
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 12px 0;
@@ -662,7 +662,7 @@ button {
   margin-top: 12px;
   display: flex;
   justify-content: space-between;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--taupe);
@@ -771,8 +771,8 @@ button {
 .saison__note {
   display: inline-block;
   margin-top: 18px;
-  max-width: 400px;
-  font-size: 14px;
+  max-width: 440px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--taupe);
 }
@@ -834,7 +834,7 @@ button {
 
 .protocole__name {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -842,7 +842,7 @@ button {
 
 .protocole__desc {
   margin-top: 14px;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.8;
   color: var(--taupe);
 }
@@ -850,7 +850,7 @@ button {
 .protocole__note {
   margin-top: 72px;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.08em;
   color: var(--taupe);
 }
@@ -885,9 +885,9 @@ button {
 
 .contact__body {
   margin: 32px auto 0;
-  max-width: 460px;
-  color: rgba(243, 240, 234, 0.6);
-  font-size: 15px;
+  max-width: 520px;
+  color: rgba(243, 240, 234, 0.7);
+  font-size: 18px;
   line-height: 1.8;
 }
 
@@ -933,7 +933,7 @@ button {
 }
 
 .demande__label {
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--laiton);
@@ -941,7 +941,7 @@ button {
 
 .demande__input {
   font: inherit;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   color: var(--porcelaine);
   background: transparent;
@@ -989,7 +989,7 @@ textarea.demande__input {
 
 .demande__note {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.04em;
   color: rgba(243, 240, 234, 0.45);
   text-align: center;
@@ -1007,7 +1007,7 @@ textarea.demande__input {
   display: flex;
   justify-content: center;
   gap: 40px;
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(243, 240, 234, 0.45);
@@ -1018,7 +1018,7 @@ textarea.demande__input {
 
 .footer {
   background: var(--encre);
-  color: rgba(243, 240, 234, 0.5);
+  color: rgba(243, 240, 234, 0.55);
   border-top: 1px solid var(--ligne-claire);
   padding: 32px var(--marge);
   display: flex;
@@ -1026,7 +1026,7 @@ textarea.demande__input {
   align-items: center;
   gap: 24px;
   flex-wrap: wrap;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }

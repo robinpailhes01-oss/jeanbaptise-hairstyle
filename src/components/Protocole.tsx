@@ -23,8 +23,8 @@ export function Protocole() {
       </div>
       <Reveal delay={0.3}>
         <p className="protocole__note">
-          Vous êtes un hôtel ou une agence ? J’ai préparé un dossier de présentation —{' '}
-          <a href={`mailto:${EMAIL}?subject=Dossier de présentation`}>écrivez-moi, je vous l’envoie</a>.
+          Hôtels &amp; agences : dossier de présentation{' '}
+          <a href={`mailto:${EMAIL}?subject=Dossier de présentation`}>sur demande</a>.
         </p>
       </Reveal>
     </section>

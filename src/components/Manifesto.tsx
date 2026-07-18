@@ -48,10 +48,8 @@ export function Manifesto() {
       </motion.h2>
       <Reveal delay={0.2}>
         <p className="manifesto__aside">
-          Je m’appelle Jean Baptiste. Je coiffe depuis plus de dix ans, des chalets de
-          Courchevel aux suites du Festival de Cannes. Ce que j’aime : arriver avec mes ciseaux, m’installer
-          n’importe où, et vous rendre la vie simple. Vous n’avez rien à préparer — juste à
-          être là.
+          Je m’appelle Jean Baptiste. Depuis dix ans, je coiffe des chalets de Courchevel
+          aux suites du Festival de Cannes. Vous n’avez rien à préparer — juste à être là.
         </p>
       </Reveal>
     </section>

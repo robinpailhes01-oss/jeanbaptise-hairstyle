@@ -36,36 +36,36 @@ export const services: Service[] = [
   {
     num: '01',
     name: 'Palaces & Hôtels',
-    desc: 'Je viens coiffer vos hôtes dans leur suite, du matin au soir de gala.',
+    desc: 'Vos hôtes, coiffés dans leur suite.',
     detail:
-      'Vos hôtes me retrouvent dans leur suite, à l’heure qui les arrange. Je travaille en silence, je laisse la chambre impeccable — et votre conciergerie ne reçoit que des compliments.',
+      'À l’heure qui arrange vos hôtes. Je travaille en silence, je laisse la chambre impeccable.',
     prestations: ['Brushing & coiffage', 'Chignons du soir', 'Coupe en suite', 'Forfaits séjour'],
     image: images.bord,
   },
   {
     num: '02',
     name: 'Agences & Productions',
-    desc: 'Shootings, plateaux, défilés : je suis là avant l’heure, prêt.',
+    desc: 'Shootings, plateaux, défilés.',
     detail:
-      'Un plateau qui tourne n’attend pas. J’arrive avant l’équipe, je suis la lumière, et je tiens la coiffure toute la journée — retouches comprises.',
+      'J’arrive avant l’équipe et je tiens la coiffure toute la journée, retouches comprises.',
     prestations: ['Shootings & campagnes', 'Défilés & showrooms', 'Clips & tournages', 'Direction coiffure'],
     image: images.profil,
   },
   {
     num: '03',
     name: 'Particuliers',
-    desc: 'Je viens chez vous, en toute discrétion. Le salon en moins, le confort en plus.',
+    desc: 'Chez vous, en toute discrétion.',
     detail:
-      'Chez vous, au calme. On prend le temps de parler de vos cheveux, de ce qui vous va vraiment — et je coiffe pendant que le café passe.',
+      'On parle de ce qui vous va vraiment, et je coiffe pendant que le café passe.',
     prestations: ['Coupe & coiffage', 'Couleur & soin', 'Avant un événement', 'Rendez-vous réguliers'],
     image: images.geste,
   },
   {
     num: '04',
     name: 'Événements & Mariages',
-    desc: 'Le grand jour, j’arrive tôt et je reste le temps qu’il faut.',
+    desc: 'Le grand jour, je suis là.',
     detail:
-      'Un mariage se joue le matin. J’arrive tôt, je coiffe la mariée puis ceux qui comptent, et je reste pour la retouche juste avant les photos.',
+      'J’arrive tôt, je coiffe la mariée, et je reste pour la retouche d’avant les photos.',
     prestations: ['Essai coiffure', 'Jour J à domicile', 'Cortège & invités', 'Retouches sur place'],
     image: '/images/reel-02.jpg',
   },
@@ -76,22 +76,22 @@ export const saisons = [
   {
     periode: 'L’hiver',
     lieu: 'Courchevel',
-    note: 'Les chalets et les palaces des neiges. Je coiffe au coin du feu, avant le dîner.',
+    note: 'Chalets & palaces des neiges.',
   },
   {
     periode: 'En mai',
     lieu: 'Cannes',
-    note: 'Le Festival : montées des marches, shootings, retouches de dernière minute dans les suites.',
+    note: 'Le Festival, des marches aux suites.',
   },
   {
     periode: 'L’été',
     lieu: 'Calvi, en Corse',
-    note: 'Villas, bateaux, mariages. Les plus belles coiffures sont celles qui tiennent face au vent.',
+    note: 'Villas, bateaux, mariages.',
   },
   {
     periode: 'Toute l’année',
     lieu: 'Paris & ailleurs',
-    note: 'Je voyage léger. Dites-moi où vous êtes, j’arrive.',
+    note: 'Dites-moi où vous êtes, j’arrive.',
   },
 ]
 
@@ -99,16 +99,16 @@ export const protocole = [
   {
     num: 'I',
     name: 'Vous m’écrivez',
-    desc: 'Une date, un lieu, une envie. Je vous réponds dans la journée.',
+    desc: 'Une date, un lieu. Je réponds dans la journée.',
   },
   {
     num: 'II',
     name: 'On prépare',
-    desc: 'On échange, je note vos préférences, et j’arrive avec tout ce qu’il faut.',
+    desc: 'Je note vos préférences, j’arrive avec tout.',
   },
   {
     num: 'III',
     name: 'Je coiffe',
-    desc: 'Je m’installe, je coiffe, je range. Il ne reste que le plaisir d’être bien coiffé.',
+    desc: 'Je m’installe, je coiffe, je m’efface.',
   },
 ]
