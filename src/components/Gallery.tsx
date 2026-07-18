@@ -4,7 +4,7 @@ import { Frame } from './Frame'
 import { Reel } from './Reel'
 
 /**
- * Galerie éditoriale pensée pour peu d'images : 4 photographies,
+ * Galerie éditoriale pensée pour peu d'images : 3 photographies,
  * 3 réels — chacune traitée en grand, en quinconce.
  */
 export function Gallery() {
@@ -23,7 +23,7 @@ export function Gallery() {
           <Frame src={images.profil} alt="Carré ondulé, de profil, face à la mer" num="III" label="Photographie III" />
           <p className="gallery__caption">
             <span>Le carré — Riviera</span>
-            <span>III / IV</span>
+            <span>III / III</span>
           </p>
         </div>
         <div className="gallery__item--b">
@@ -34,10 +34,10 @@ export function Gallery() {
           </p>
         </div>
         <div className="gallery__item--c">
-          <Frame src={images.portrait} alt="Portrait de Jean Baptiste" num="IV" label="Photographie IV" />
+          <Reel {...reels[2]} />
           <p className="gallery__caption">
-            <span>Jean Baptiste</span>
-            <span>IV / IV</span>
+            <span>{reels[2].title}</span>
+            <span>Réel III</span>
           </p>
         </div>
         <div className="gallery__item--d">
@@ -51,14 +51,7 @@ export function Gallery() {
           <Frame src={images.bord} alt="À bord, en déplacement" num="II" label="Photographie II" />
           <p className="gallery__caption">
             <span>Entre deux rendez-vous</span>
-            <span>II / IV</span>
-          </p>
-        </div>
-        <div className="gallery__item--f">
-          <Reel {...reels[2]} />
-          <p className="gallery__caption">
-            <span>{reels[2].title}</span>
-            <span>Réel III</span>
+            <span>II / III</span>
           </p>
         </div>
       </div>

@@ -10,7 +10,6 @@ export const images = {
   geste: '/images/photo-01.jpg',
   bord: '/images/photo-02.jpg',
   profil: '/images/photo-03.jpg',
-  portrait: '/images/photo-04.jpg',
 }
 
 /**
@@ -68,7 +67,7 @@ export const services: Service[] = [
     detail:
       'Un mariage se joue le matin. J’arrive tôt, je coiffe la mariée puis ceux qui comptent, et je reste pour la retouche juste avant les photos.',
     prestations: ['Essai coiffure', 'Jour J à domicile', 'Cortège & invités', 'Retouches sur place'],
-    image: images.portrait,
+    image: '/images/reel-02.jpg',
   },
 ]
 
