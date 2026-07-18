@@ -275,6 +275,11 @@ button {
     order: 1;
     margin-top: 0;
   }
+  .hero__status {
+    order: 1;
+    padding-left: 0;
+    margin-top: 12px;
+  }
   .hero__figure {
     position: relative;
     right: auto;
@@ -288,6 +293,42 @@ button {
     order: 3;
     margin-top: auto;
     padding-bottom: 8px;
+  }
+}
+
+.hero__status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 20px;
+  padding-left: calc(clamp(40px, 8vw, 120px) + 24px);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--taupe);
+}
+
+.hero__status .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--laiton);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__status .dot {
+    animation: none;
   }
 }
 
@@ -650,6 +691,90 @@ button {
   color: rgba(250, 248, 243, 0.95);
   background: rgba(26, 23, 19, 0.14);
   backdrop-filter: blur(3px);
+}
+
+/* ——— Saisons ——— */
+
+.saisons {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+}
+
+.ticker {
+  overflow: hidden;
+  border-top: 1px solid var(--ligne);
+  border-bottom: 1px solid var(--ligne);
+  padding: 20px 0;
+}
+
+.ticker__track {
+  display: flex;
+  width: max-content;
+  animation: ticker 36s linear infinite;
+}
+
+.ticker__half {
+  display: flex;
+  white-space: nowrap;
+}
+
+.ticker__half span {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3.2vw, 44px);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--encre);
+  opacity: 0.3;
+}
+
+.ticker__half i {
+  font-style: normal;
+  color: var(--laiton);
+  padding: 0 20px;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker__track {
+    animation: none;
+  }
+}
+
+.saisons__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: clamp(48px, 7vw, 96px) var(--marge) clamp(16px, 2vw, 32px);
+}
+
+.saison {
+  padding: clamp(36px, 5vw, 64px) var(--marge);
+}
+
+.saison--droite {
+  text-align: right;
+}
+
+.saison__lieu {
+  font-size: clamp(46px, 9vw, 150px);
+  line-height: 0.95;
+  text-transform: uppercase;
+  margin-top: 14px;
+}
+
+.saison__note {
+  display: inline-block;
+  margin-top: 18px;
+  max-width: 400px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--taupe);
 }
 
 /* ——— Protocole ——— */

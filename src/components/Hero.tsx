@@ -45,6 +45,16 @@ export function Hero({ ready }: { ready: boolean }) {
         <p className="eyebrow">Coiffeur — je viens à vous, à Paris &amp; partout ailleurs</p>
       </motion.div>
 
+      <motion.p
+        className="hero__status"
+        initial={{ opacity: 0 }}
+        animate={ready ? { opacity: 1 } : {}}
+        transition={{ duration: 1, delay: 1.1 }}
+      >
+        <span className="dot" aria-hidden="true" />
+        Cet été — Calvi, Corse
+      </motion.p>
+
       <motion.figure className="hero__figure" style={{ y: figureY }}>
         <motion.div
           initial={{ opacity: 0 }}

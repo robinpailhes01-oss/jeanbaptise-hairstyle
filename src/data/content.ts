@@ -72,6 +72,30 @@ export const services: Service[] = [
   },
 ]
 
+/** Les saisons de Jean Baptiste — son itinéraire de l'année. */
+export const saisons = [
+  {
+    periode: 'L’hiver',
+    lieu: 'Courchevel',
+    note: 'Les chalets et les palaces des neiges. Je coiffe au coin du feu, avant le dîner.',
+  },
+  {
+    periode: 'En mai',
+    lieu: 'Cannes',
+    note: 'Le Festival : montées des marches, shootings, retouches de dernière minute dans les suites.',
+  },
+  {
+    periode: 'L’été',
+    lieu: 'Calvi, en Corse',
+    note: 'Villas, bateaux, mariages. Les plus belles coiffures sont celles qui tiennent face au vent.',
+  },
+  {
+    periode: 'Toute l’année',
+    lieu: 'Paris & ailleurs',
+    note: 'Je voyage léger. Dites-moi où vous êtes, j’arrive.',
+  },
+]
+
 export const protocole = [
   {
     num: 'I',
