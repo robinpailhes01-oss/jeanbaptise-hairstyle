@@ -1014,6 +1014,68 @@ textarea.demande__input {
   flex-wrap: wrap;
 }
 
+/* ——— Mentions légales & CGV ——— */
+
+.legal {
+  max-width: 760px;
+  margin: 0 auto;
+  min-height: 70vh;
+}
+
+.legal__retour {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--taupe);
+  border-bottom: 1px solid var(--ligne);
+  padding-bottom: 2px;
+}
+
+.legal__retour:hover {
+  color: var(--encre);
+}
+
+.legal__title {
+  font-size: clamp(36px, 6vw, 72px);
+  text-transform: uppercase;
+  margin-top: 12px;
+  margin-bottom: 48px;
+}
+
+.legal__bloc {
+  padding: 28px 0;
+  border-top: 1px solid var(--ligne);
+}
+
+.legal__bloc h2 {
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--laiton);
+}
+
+.legal__bloc p {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--taupe);
+}
+
+.footer__legal {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--ligne-claire);
+  padding-bottom: 1px;
+}
+
+.footer__legal:hover {
+  color: var(--porcelaine);
+}
+
 /* ——— Pied de page ——— */
 
 .footer {

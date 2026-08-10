@@ -10,9 +10,17 @@ import { Saisons } from './components/Saisons'
 import { Protocole } from './components/Protocole'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
+import { Legal } from './components/Legal'
 
 export default function App() {
   const [veilDone, setVeilDone] = useState(false)
+  const [route, setRoute] = useState(window.location.hash)
+
+  useEffect(() => {
+    const onHash = () => setRoute(window.location.hash)
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
 
   // Défilement inertiel doux (désactivé si l'utilisateur préfère moins de mouvement)
   useEffect(() => {
@@ -29,6 +37,15 @@ export default function App() {
       lenis.destroy()
     }
   }, [])
+
+  if (route === '#/mentions') {
+    return (
+      <>
+        <Legal />
+        <Footer />
+      </>
+    )
+  }
 
   return (
     <>
